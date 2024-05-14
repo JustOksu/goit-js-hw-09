@@ -1,5 +1,31 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 document.addEventListener('DOMContentLoaded', function () {
   const gallery = document.querySelector('.gallery');
+
+  const styles = `
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .gallery-item {
+      display: flex;
+      justify-content: center;
+    }
+    .gallery-link {
+      text-decoration: none;
+    }
+    .gallery-image {
+      max-width: 100%;
+      height: auto;
+    }
+  `;
+
+  const styleElement = document.createElement('style');
+  styleElement.textContent = styles;
+  document.head.appendChild(styleElement);
 
   const images = [
     {
