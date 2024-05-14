@@ -1,6 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 document.addEventListener('DOMContentLoaded', function () {
   const gallery = document.querySelector('.gallery');
 
@@ -73,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryItems = images
     .map(image => {
       return `
-          <li class="gallery-item">
+          <div class="gallery-item">
               <a class="gallery-link" href="${image.original}">
                   <img class="gallery-image" src="${image.preview}" alt="${image.description}" />
               </a>
-          </li>
+          </div>
       `;
     })
     .join('');
