@@ -9,6 +9,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.0/simple-lightbox.min.css"
     />
     <title>Page 2</title>
+    <style>
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .gallery-item {
+        display: flex;
+        justify-content: center;
+      }
+      .gallery-link {
+        text-decoration: none;
+      }
+      .gallery-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
